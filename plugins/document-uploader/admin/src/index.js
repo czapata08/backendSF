@@ -4,6 +4,17 @@ import App from "./containers/App";
 import Initializer from "./containers/Initializer";
 import lifecycles from "./lifecycles";
 import trads from "./translations";
+import { ApolloProvider } from "@apollo/client";
+import client from "./client";
+import React from "react";
+
+const Plugin = () => {
+  return (
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
+  );
+};
 
 export default (strapi) => {
   const pluginDescription =
@@ -23,7 +34,7 @@ export default (strapi) => {
     isRequired: pluginPkg.strapi.required || false,
     layout: null,
     lifecycles,
-    mainComponent: App,
+    mainComponent: Plugin,
     name,
     preventComponentRendering: false,
     trads,
