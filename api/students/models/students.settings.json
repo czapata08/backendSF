@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "name": "Students",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Forename": {
+      "type": "string"
+    },
+    "PreferedName": {
+      "type": "string"
+    },
+    "Surname": {
+      "type": "string"
+    },
+    "School_Id": {
+      "type": "string"
+    },
+    "qr_code": {
+      "model": "qrc-odes",
+      "via": "student"
+    },
+    "DOB": {
+      "type": "string"
+    },
+    "after_care_time_logs": {
+      "collection": "after-care-time-log",
+      "via": "students",
+      "dominant": true
+    }
+  }
+}

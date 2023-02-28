@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "qrcodes",
+  "info": {
+    "name": "QRCodes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "qrcode": {
+      "type": "text"
+    },
+    "data": {
+      "type": "json"
+    },
+    "student": {
+      "via": "qr_code",
+      "model": "students"
+    }
+  }
+}

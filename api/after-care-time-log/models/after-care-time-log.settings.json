@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "after_care_time_logs",
+  "info": {
+    "name": "AfterCareTimeLog",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Date": {
+      "type": "date"
+    },
+    "StartTime": {
+      "type": "time"
+    },
+    "StopTime": {
+      "type": "time"
+    },
+    "School_ID": {
+      "type": "string"
+    },
+    "Duration": {
+      "type": "string"
+    },
+    "student": {
+      "model": "students"
+    },
+    "students": {
+      "via": "after_care_time_logs",
+      "collection": "students"
+    }
+  }
+}

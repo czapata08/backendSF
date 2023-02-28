@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/document-uploader",
+      "handler": "document-uploader.index",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/after-care-time-logs",
+      "handler": "after-care-time-log.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/after-care-time-logs/count",
+      "handler": "after-care-time-log.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/after-care-time-logs/:id",
+      "handler": "after-care-time-log.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/after-care-time-logs",
+      "handler": "after-care-time-log.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/after-care-time-logs/:id",
+      "handler": "after-care-time-log.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/after-care-time-logs/:id",
+      "handler": "after-care-time-log.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

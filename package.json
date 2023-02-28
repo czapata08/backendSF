@@ -1,0 +1,43 @@
+{
+  "name": "student-flow",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "knex": "0.21.18",
+    "mongoose": "^7.0.0",
+    "sqlite3": "5.0.0",
+    "strapi": "3.6.11",
+    "strapi-admin": "3.6.11",
+    "strapi-connector-bookshelf": "3.6.11",
+    "strapi-connector-mongoose": "^3.6.11",
+    "strapi-plugin-content-manager": "3.6.11",
+    "strapi-plugin-content-type-builder": "3.6.11",
+    "strapi-plugin-email": "3.6.11",
+    "strapi-plugin-entity-relationship-chart": "3.1.0",
+    "strapi-plugin-i18n": "3.6.11",
+    "strapi-plugin-passwordless": "3.x",
+    "strapi-plugin-upload": "3.6.11",
+    "strapi-plugin-users-permissions": "3.6.11",
+    "strapi-utils": "3.6.11"
+  },
+  "author": {
+    "name": "Carlos Zapata"
+  },
+  "strapi": {
+    "uuid": "d22eb9a1-b222-412d-b90a-578df98fdc7b",
+    "template": "https://github.com/strapi/strapi-template-ecommerce"
+  },
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x"
+  },
+  "license": "MIT"
+}

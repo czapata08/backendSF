@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/qrc-odes",
+      "handler": "qrc-odes.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/qrc-odes/count",
+      "handler": "qrc-odes.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/qrc-odes/:id",
+      "handler": "qrc-odes.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/qrc-odes",
+      "handler": "qrc-odes.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/qrc-odes/:id",
+      "handler": "qrc-odes.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/qrc-odes/:id",
+      "handler": "qrc-odes.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
