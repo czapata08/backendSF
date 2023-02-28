@@ -8,14 +8,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { NotFound } from "strapi-helper-plugin";
-import { ApolloProvider } from "@apollo/client";
-
-import ExcelToMongoDB from "../../components/excelToMongoDB";
 
 // Utils
 import pluginId from "../../pluginId";
-// Containers
-import HomePage from "../HomePage";
+// Containers - Main Component
+import ExcelToMongoDB from "../../components/excelToMongoDB";
 
 const App = () => {
   return (
