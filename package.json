@@ -16,6 +16,8 @@
     "mongodb": "^5.1.0",
     "mongoose": "^7.0.0",
     "sqlite3": "5.0.0",
+    "xlsx": "^0.18.5",
+    "graphql": "^16.6.0",
     "strapi": "3.6.11",
     "strapi-admin": "3.6.11",
     "strapi-connector-bookshelf": "3.6.11",
