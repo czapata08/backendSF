@@ -1,0 +1,26 @@
+{
+  "timeout": 100,
+  "load": {
+    "before": [
+      "responseTime",
+      "logger",
+      {
+        "name": "cors",
+        "enabled": true,
+        "params": {
+          "origin": [
+            "https://morning-forest-39166.herokuapp.com/",
+            "http://localhost1337/",
+            "https://student-flow-master.vercel.app/"
+          ]
+        }
+      },
+      "responses",
+      "gzip"
+    ],
+    "order": [
+      "Define the middlewares' load order by putting their name in this array is the right order"
+    ],
+    "after": ["parser", "router"]
+  }
+}
