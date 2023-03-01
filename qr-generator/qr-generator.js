@@ -1,8 +1,11 @@
 const mongodb = require("mongodb");
 const qrcode = require("qrcode");
 
+const uri =
+  "mongodb+srv://admincz:marjorie@cluster0.yqxp8dx.mongodb.net/?retryWrites=true&w=majority";
+
 const generateQRCode = async (studentId) => {
-  const db = await mongodb.MongoClient.connect(`${process.env.MONGODB_URI}`, {
+  const db = await mongodb.MongoClient.connect(uri, {
     useNewUrlParser: true,
   });
 

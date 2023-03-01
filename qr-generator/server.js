@@ -1,12 +1,16 @@
 const express = require("express");
 const generateQRCode = require("./qr-generator");
+const mongodb = require("mongodb");
 
 const app = express();
+
+const uri =
+  "mongodb+srv://admincz:marjorie@cluster0.yqxp8dx.mongodb.net/?retryWrites=true&w=majority";
 
 app.listen(3838, async (req, res) => {
   console.log("Server is listening on port 3838");
   try {
-    const db = await mongodb.MongoClient.connect(`${process.env.MONGODB_URI}`, {
+    const db = await mongodb.MongoClient.connect(uri, {
       useNewUrlParser: true,
     });
     const studentIds = await db("studentFlow2")
@@ -20,9 +24,7 @@ app.listen(3838, async (req, res) => {
       await generateQRCode(studentId);
       console.log(`${JSON.stringify(res)}`);
     });
-  } catch {
-    if (error) {
-      console.log(`error: ${JSON.stringify(res.error)}`);
-    }
+  } catch (error) {
+    console.log(error);
   }
 });

@@ -47,7 +47,7 @@ const ExcelToMongoDB = () => {
       const worksheet = workbook.Sheets[sheetName];
       const userDoc = XLSX.utils.sheet_to_json(worksheet);
       console.log(`userDoc variable = ${JSON.stringify(userDoc)}`);
-      setDoc(userDoc.slice(0, 3));
+      setDoc(userDoc);
     };
     console.log(`doc inside handle function ${JSON.stringify(doc)}`);
     reader.readAsBinaryString(file);
