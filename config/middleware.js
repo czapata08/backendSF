@@ -2,7 +2,11 @@ module.exports = ({ env }) => ({
   settings: {
     cors: {
       enabled: true,
-      origin: [env("FRONTEND_URL", "*"), "http://localhost:1337"],
+      origin: [
+        env("FRONTEND_URL", "*"),
+        "http://localhost:1337",
+        "http://localhost:3000",
+      ],
       expose: ["WWW-Authenticate", "Server-Authorization"],
       maxAge: 31536000,
       credentials: true,
