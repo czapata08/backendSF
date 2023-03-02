@@ -2,7 +2,7 @@ module.exports = ({ env }) => ({
   settings: {
     cors: {
       enabled: true,
-      origin: env("https://student-flow-master.vercel.app/", "*"),
+      origin: env(FRONTEND_URL, "*"),
       expose: ["WWW-Authenticate", "Server-Authorization"],
       maxAge: 31536000,
       credentials: true,
